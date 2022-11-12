@@ -1,6 +1,8 @@
 #![allow(unused_variables)]
 #![allow(unused_assignments)]
 #![allow(unused_mut)]
+#![allow(dead_code)]
+#![allow(non_upper_case_globals)]
 
 fn main()
 {
@@ -77,4 +79,17 @@ fn main()
     mutable_int = 0;
     
     println!("mutable_int: {mutable_int}");
+
+    // const
+    
+    const const_variable: i32 = 5; // initialization in compile time
+    let immutable_variable: i32 = 7; // initialization in run time
+    // both of immutable
+
+    // const_variable = 31; error -> variable is immutable!
+    // immutable_variable = 31; error -> variable is immutable
+    //
+    println!("const_variable: {const_variable}");
+
+    println!("immutable_variable: {immutable_variable}");
 }
